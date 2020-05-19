@@ -8,7 +8,7 @@ public class OverloadedVendingMachine {
 
    public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty)
     {
-
+        // set stockLevel Here
     }
 
 
