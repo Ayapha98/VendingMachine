@@ -7,12 +7,11 @@ import vending.product.SoftDrink;
 
 public class OverloadedVendingMachine {
 
-    private int softDrinkQty = 0;
-    private int saltySnackQty = 0;
-    private int chocolateQty = 0;
+    private int softDrinkQty;
+    private int saltySnackQty;
+    private int chocolateQty;
 
-   public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty)
-    {
+    public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty) {
         // set stockLevel Here
         this.softDrinkQty = softDrinkQty;
         this.saltySnackQty = saltySnacksQty;
@@ -20,38 +19,44 @@ public class OverloadedVendingMachine {
     }
 
 
-    void buy (SoftDrink softDrink)
-    {
+    void buy(SoftDrink softDrink) {
 
-        if (softDrinkQty >= 1){
+        if (softDrinkQty >= 1) {
             System.out.println("Buying a Soft Drink");
+            softDrinkQty--;
         } else {
             System.out.println(" Soft Drink is out of stock");
         }
-        softDrinkQty--;
+
     }
-    void buy (SaltySnack saltySnack)
-    {
-        if (saltySnackQty >= 1){
+
+    void buy(SaltySnack saltySnack) {
+        if (saltySnackQty >= 1) {
             System.out.println("Buying a Salty Snack.");
+            saltySnackQty--;
         } else {
             System.out.println(" Salty snack is out of stock.");
         }
-        saltySnackQty--;
+
     }
-    void buy (Chocolate chocolate)
-    {
-        if (chocolateQty >= 1){
+
+    void buy(Chocolate chocolate) {
+        if (chocolateQty >= 1) {
             System.out.println("Buying a Chocolate");
+            chocolateQty--;
         } else {
             System.out.println(" Chocolate is out of stock");
         }
-        chocolateQty--;
+
     }
-    void buy (Product product)
-    {
+
+    void buy(Product product) {
         //System.out.println("Buying a product");
 
     }
 
+    public static void main(String[] args) {
+
+
+    }
 }
