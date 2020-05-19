@@ -22,22 +22,35 @@ public class OverloadedVendingMachine {
 
     void buy (SoftDrink softDrink)
     {
-        System.out.println("Buying a soft drink");
-        softDrinkQty++;
+
+        if (softDrinkQty >= 1){
+            System.out.println("Buying a Soft Drink");
+        } else {
+            System.out.println(" Soft Drink is out of stock");
+        }
+        softDrinkQty--;
     }
     void buy (SaltySnack saltySnack)
     {
-        System.out.println("Buying a salty snack");
-        saltySnackQty++;
+        if (saltySnackQty >= 1){
+            System.out.println("Buying a Salty Snack.");
+        } else {
+            System.out.println(" Salty snack is out of stock.");
+        }
+        saltySnackQty--;
     }
     void buy (Chocolate chocolate)
     {
-        System.out.println("Buying a chocolate");
-        chocolateQty++;
+        if (chocolateQty >= 1){
+            System.out.println("Buying a Chocolate");
+        } else {
+            System.out.println(" Chocolate is out of stock");
+        }
+        chocolateQty--;
     }
     void buy (Product product)
     {
-        System.out.println("Buying a product");
+        //System.out.println("Buying a product");
 
     }
 
