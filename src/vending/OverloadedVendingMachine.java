@@ -19,6 +19,7 @@ public class OverloadedVendingMachine {
     }
 
 
+
     void buy(SoftDrink softDrink) {
 
         if (softDrinkQty >= 1) {
@@ -50,8 +51,8 @@ public class OverloadedVendingMachine {
 
     }
 
-    void buy(Product product) {
-        //System.out.println("Buying a product");
+    void buy(Product product)
+    {
 
     }
 
@@ -81,8 +82,22 @@ public class OverloadedVendingMachine {
         chocolateQty +=3;
     }
 
-    public static void main(String[] args) {
+    int getStock (SoftDrink softDrink)
+    {
+        return softDrinkQty;
+    }
+    int getStock (SaltySnack saltySnack)
+    {
+        return saltySnackQty;
+    }
+    int getStock (Chocolate chocolate)
+    {
+        return chocolateQty;g
+    }
+
+
+
+   // public static void main(String[] args) {
 
 
     }
-}
