@@ -16,6 +16,7 @@ public class OverloadedVendingMachine {
         this.softDrinkQty = softDrinkQty;
         this.saltySnackQty = saltySnacksQty;
         this.chocolateQty = chocolatesQty;
+
     }
 
 
@@ -51,10 +52,10 @@ public class OverloadedVendingMachine {
 
     }
 
-    void buy(Product product)
-    {
+    void buy(Product product) {
 
     }
+
 
     void addStock (SoftDrink softDrink)
     {
@@ -93,6 +94,10 @@ public class OverloadedVendingMachine {
     int getStock (Chocolate chocolate)
     {
         return chocolateQty;
+    }
+    int getStock (Product product)
+    {
+        return saltySnackQty + softDrinkQty + chocolateQty;
     }
 
 
