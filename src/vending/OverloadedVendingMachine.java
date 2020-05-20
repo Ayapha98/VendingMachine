@@ -73,7 +73,13 @@ public class OverloadedVendingMachine {
         chocolateQty++;
     }
 
-
+    void addStock (Product product)
+    {
+        System.out.println("Adding three stock items to each product type");
+        softDrinkQty +=3;
+        saltySnackQty +=3;
+        chocolateQty +=3;
+    }
 
     public static void main(String[] args) {
 
