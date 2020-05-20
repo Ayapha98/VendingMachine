@@ -54,4 +54,10 @@ class VendingMachineTest {
         ovm.addStock(new Product());
         assertEquals(26, ovm.getStock(new Product()));
     }
+    @Test
+    public void shouldBuyAllThreeProducts () {
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(7, 0, 1);
+        ovm.buy(new Product());
+        assertEquals(8, ovm.getStock(new Product()));
+    }
 }

@@ -52,9 +52,16 @@ public class OverloadedVendingMachine {
 
     }
 
-    void buy(Product product) {
-
-
+    void buy(Product product)
+    {
+        if (softDrinkQty >= 1 && saltySnackQty >=1 && chocolateQty>=1){
+            System.out.println("Buying 1 of each product type");
+            softDrinkQty--;
+            saltySnackQty--;
+            chocolateQty--;
+        } else {
+            System.out.println("Order can't be processed. Please check stock level of selected items");
+        }
     }
 
 
