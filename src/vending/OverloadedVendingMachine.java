@@ -55,6 +55,26 @@ public class OverloadedVendingMachine {
 
     }
 
+    void addStock (SoftDrink softDrink)
+    {
+        System.out.println("Adding stock to Soft Drinks.");
+        softDrinkQty++;
+    }
+
+    void addStock (SaltySnack saltySnack)
+    {
+        System.out.println("Adding stock to Salty Snacks.");
+        saltySnackQty++;
+    }
+
+    void addStock (Chocolate chocolate)
+    {
+        System.out.println("Adding stock to Chocolates.");
+        chocolateQty++;
+    }
+
+
+
     public static void main(String[] args) {
 
 
