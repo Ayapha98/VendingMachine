@@ -92,7 +92,7 @@ public class OverloadedVendingMachine {
     }
     int getStock (Chocolate chocolate)
     {
-        return chocolateQty;g
+        return chocolateQty;
     }
 
 
