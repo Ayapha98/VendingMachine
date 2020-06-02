@@ -15,36 +15,38 @@ public class ExtendableVendingMachine {
 
     }
 
-    void buy (Product product) {
+    void buy(Product product) {
         if (product instanceof SoftDrink) {
-            softDrinkQty--;
+            if (softDrinkQty > 0)
+                softDrinkQty--;
         } else if (product instanceof SaltySnack) {
-            saltySnackQty--;
-        } else {
-            chocolateQty--;
-
+            if (saltySnackQty > 0)
+                saltySnackQty--;
+        } else if (product instanceof Chocolate) {
+            if (chocolateQty > 0)
+                chocolateQty--;
         }
     }
 
-    void addStock (Product product){
+    void addStock(Product product) {
         if (product instanceof SoftDrink) {
-            softDrinkQty +=3;
+            softDrinkQty += 3;
         } else if (product instanceof SaltySnack) {
-            saltySnackQty +=3;
-        } else {
-            chocolateQty +=3;
-
+            saltySnackQty += 3;
+        } else if (product instanceof Chocolate) {
+            chocolateQty += 3;
         }
     }
 
-    public int getStock (Product product){
+    public int getStock(Product product) {
         if (product instanceof SoftDrink) {
             return softDrinkQty;
         } else if (product instanceof SaltySnack) {
             return saltySnackQty;
-        } else {
+        } else if (product instanceof Chocolate) {
             return chocolateQty;
-
+        }  else {
+            return 0;
         }
     }
 }
