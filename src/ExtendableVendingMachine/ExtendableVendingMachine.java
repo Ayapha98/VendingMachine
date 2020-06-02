@@ -45,7 +45,9 @@ public class ExtendableVendingMachine {
             return saltySnackQty;
         } else if (product instanceof Chocolate) {
             return chocolateQty;
-        }  else {
+        }  else if (product instanceof Product){
+            return softDrinkQty + saltySnackQty + saltySnackQty;
+        } else {
             return 0;
         }
     }
