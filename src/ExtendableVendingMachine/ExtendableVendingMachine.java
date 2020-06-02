@@ -25,6 +25,24 @@ public class ExtendableVendingMachine {
         } else if (product instanceof Chocolate) {
             if (chocolateQty > 0)
                 chocolateQty--;
+        } else if (product instanceof Product){
+            if (saltySnackQty>0 && softDrinkQty>0 && chocolateQty>0);
+                softDrinkQty--;
+                saltySnackQty--;
+                chocolateQty--;
+        }
+    }
+
+    void buy (Product product, int qty){
+        if (product instanceof SoftDrink){
+            if (softDrinkQty>0 && softDrinkQty> qty);
+            softDrinkQty -=qty;
+        } else if (product instanceof SaltySnack){
+            if(saltySnackQty>0 && saltySnackQty>qty);
+            saltySnackQty -=qty;
+        } else if (product instanceof Chocolate){
+            if (chocolateQty>0 && chocolateQty>qty);
+            chocolateQty -=qty;
         }
     }
 
@@ -51,6 +69,7 @@ public class ExtendableVendingMachine {
             return 0;
         }
     }
+
 }
 
 
