@@ -56,6 +56,18 @@ public class ExtendableVendingMachine {
         }
     }
 
+    void addStock(Product product, int qty) {
+        if (product instanceof SoftDrink) {
+            softDrinkQty += qty;
+        } else if (product instanceof SaltySnack) {
+            saltySnackQty += qty;
+        } else if (product instanceof Chocolate) {
+            chocolateQty += qty;
+        }
+    }
+
+
+
     public int getStock(Product product) {
         if (product instanceof SoftDrink) {
             return softDrinkQty;
