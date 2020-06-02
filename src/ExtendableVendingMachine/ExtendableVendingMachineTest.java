@@ -26,6 +26,5 @@ class ExtendableVendingMachineTest {
         assertEquals(18, evm.getStock(new Product()));
     }
 
-    @Test
 
 }
