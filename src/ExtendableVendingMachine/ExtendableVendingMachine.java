@@ -36,6 +36,8 @@ public class ExtendableVendingMachine {
             saltySnackQty--;
             chocolateQty--;
             jellyBabyQty--;
+        } else {
+            System.out.println("Selected product is out of stock");
         }
     }
 
@@ -52,6 +54,8 @@ public class ExtendableVendingMachine {
         } else if (product instanceof JellyBaby) {
             if (jellyBabyQty > 0 && jellyBabyQty > qty)
                 jellyBabyQty -= qty;
+        } else {
+            System.out.println("Purchase unsuccessful. Product quantity is lower than specified quantity");
         }
     }
 
@@ -95,6 +99,20 @@ public class ExtendableVendingMachine {
             return 0;
         }
     }
+
+    public static void main(String[] args) {
+        ExtendableVendingMachine evm = new ExtendableVendingMachine(9,7,3,5);
+        evm.buy(new SaltySnack(), 3);
+        evm.getStock(new SaltySnack());
+
+       evm.addStock(new SoftDrink(), 4);
+       evm.getStock(new SoftDrink());
+
+       evm.buy(new JellyBaby(), 7);
+       evm.getStock(new JellyBaby());
+    }
+
+
 
 }
 
