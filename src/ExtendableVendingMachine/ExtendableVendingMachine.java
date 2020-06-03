@@ -43,16 +43,16 @@ public class ExtendableVendingMachine {
 
     void buy(Product product, int qty) {
         if (product instanceof SoftDrink) {
-            if (softDrinkQty > 0 && softDrinkQty > qty) ;
+            if (softDrinkQty > 0 && softDrinkQty >= qty) ;
             softDrinkQty -= qty;
         } else if (product instanceof SaltySnack) {
-            if (saltySnackQty > 0 && saltySnackQty > qty) ;
+            if (saltySnackQty > 0 && saltySnackQty >= qty) ;
             saltySnackQty -= qty;
         } else if (product instanceof Chocolate) {
-            if (chocolateQty > 0 && chocolateQty > qty) ;
+            if (chocolateQty > 0 && chocolateQty >= qty) ;
             chocolateQty -= qty;
         } else if (product instanceof JellyBaby) {
-            if (jellyBabyQty > 0 && jellyBabyQty > qty)
+            if (jellyBabyQty > 0 && jellyBabyQty >= qty)
                 jellyBabyQty -= qty;
         } else {
             System.out.println("Purchase unsuccessful. Product quantity is lower than specified quantity");
